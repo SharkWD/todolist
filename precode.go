@@ -56,7 +56,7 @@ func getTasks(w http.ResponseWriter, r *http.Request) {
 
 	_, err = w.Write(resp)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		fmt.Printf("Ошибка сервера: %v", http.StatusInternalServerError)
 		return
 	}
 }
@@ -82,7 +82,7 @@ func getTaskID(w http.ResponseWriter, r *http.Request) {
 
 	_, err = w.Write(resp)
 	if err != nil {
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		fmt.Printf("Ошибка сервера: %v", http.StatusInternalServerError)
 		return
 	}
 
